@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AstroVision - Professional Vedic Astrology Consultations</title>
-    <meta name="description" content="Discover your cosmic destiny with AstroVision's expert Vedic astrology consultations. 15+ years of experience in horoscope readings, compatibility analysis, and yearly forecasts.">
+    <meta name="description" content="Expert Vedic astrology consultations with 15+ years of experience. Personal horoscope readings, compatibility analysis, and yearly forecasts.">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -20,6 +20,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -37,10 +38,9 @@
         <div class="hero-content">
             <div class="hero-logo">
                 <h1>AstroVision</h1>
-                <div class="logo-symbol">✦</div>
             </div>
-            <p class="hero-tagline">Unlock the Mysteries of Your Cosmic Destiny</p>
-            <button class="cta-button">Book a Consultation</button>
+            <p class="hero-tagline">Unlock the mysteries of your destiny through ancient Vedic wisdom</p>
+            <a href="#contact" class="cta-button">Book a Consultation</a>
         </div>
         <div class="scroll-indicator">
             <div class="scroll-arrow"></div>
@@ -52,28 +52,34 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-image">
-                    <img src="/placeholder.svg?height=400&width=350" alt="Master Astrologer">
-                    <div class="image-glow"></div>
+                    <img src="/placeholder.svg?height=400&width=350" alt="Master Astrologer" class="astrologer-photo">
                 </div>
                 <div class="about-text">
-                    <h2>Master of Vedic Wisdom</h2>
-                    <p class="about-intro">With over 15 years of dedicated practice in Vedic astrology, I have guided thousands of souls on their spiritual journey through the ancient wisdom of the stars.</p>
-                    <p>My expertise spans traditional Vedic techniques, planetary analysis, and intuitive guidance that bridges ancient knowledge with modern understanding. Each consultation is a sacred space where cosmic insights meet personal transformation.</p>
-                    <div class="credentials">
-                        <div class="credential">
-                            <i class="fas fa-star"></i>
-                            <span>15+ Years Experience</span>
+                    <h2 class="section-title">About Master Astrologer</h2>
+                    <p class="about-description">
+                        With over 15 years of dedicated practice in Vedic astrology, I have guided thousands of souls 
+                        on their spiritual journey. My expertise lies in combining ancient wisdom with modern insights 
+                        to provide accurate and meaningful readings.
+                    </p>
+                    <p class="about-description">
+                        Specializing in birth chart analysis, planetary transits, and karmic patterns, I help individuals 
+                        understand their life purpose and navigate challenges with clarity and confidence.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Years Experience</span>
                         </div>
-                        <div class="credential">
-                            <i class="fas fa-users"></i>
-                            <span>5000+ Consultations</span>
+                        <div class="stat">
+                            <span class="stat-number">5000+</span>
+                            <span class="stat-label">Happy Clients</span>
                         </div>
-                        <div class="credential">
-                            <i class="fas fa-certificate"></i>
-                            <span>Certified Vedic Astrologer</span>
+                        <div class="stat">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Accuracy Rate</span>
                         </div>
                     </div>
-                    <a href="#services" class="learn-more-btn">Learn More About My Services</a>
+                    <a href="#services" class="learn-more-btn">Learn More</a>
                 </div>
             </div>
         </div>
@@ -82,35 +88,63 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Sacred Services</h2>
-            <p class="section-subtitle">Discover the cosmic guidance that awaits you</p>
+            <h2 class="section-title">Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-user-astronaut"></i>
+                        <i class="fas fa-star"></i>
                     </div>
                     <h3>Personal Horoscope Reading</h3>
-                    <p>Deep dive into your birth chart to uncover your life purpose, strengths, challenges, and the cosmic blueprint of your soul's journey.</p>
-                    <div class="service-price">From $89</div>
-                    <button class="book-btn">Book Now</button>
+                    <p>Comprehensive birth chart analysis revealing your personality, strengths, and life path.</p>
+                    <div class="service-price">₹2,500</div>
+                    <a href="#contact" class="service-btn">Book Now</a>
                 </div>
-                <div class="service-card featured">
+                <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-heart"></i>
                     </div>
                     <h3>Compatibility Analysis</h3>
-                    <p>Explore the cosmic connection between you and your partner. Understand relationship dynamics and discover paths to harmony.</p>
-                    <div class="service-price">From $129</div>
-                    <button class="book-btn">Book Now</button>
+                    <p>Detailed relationship compatibility assessment for couples and business partnerships.</p>
+                    <div class="service-price">₹3,500</div>
+                    <a href="#contact" class="service-btn">Book Now</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-calendar-alt"></i>
                     </div>
                     <h3>Yearly Forecasts</h3>
-                    <p>Navigate the year ahead with confidence. Detailed predictions for career, relationships, health, and spiritual growth.</p>
-                    <div class="service-price">From $199</div>
-                    <button class="book-btn">Book Now</button>
+                    <p>Complete yearly predictions with monthly breakdowns and remedial suggestions.</p>
+                    <div class="service-price">₹4,500</div>
+                    <a href="#contact" class="service-btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <h2 class="section-title">Certifications & Credentials</h2>
+            <div class="certificates-gallery">
+                <div class="certificate-card">
+                    <img src="/placeholder.svg?height=300&width=250" alt="Vedic Astrology Certification">
+                    <h4>Vedic Astrology Diploma</h4>
+                    <p>Indian Council of Astrological Sciences</p>
+                </div>
+                <div class="certificate-card">
+                    <img src="/placeholder.svg?height=300&width=250" alt="Palmistry Certification">
+                    <h4>Advanced Palmistry</h4>
+                    <p>International Palmistry Association</p>
+                </div>
+                <div class="certificate-card">
+                    <img src="/placeholder.svg?height=300&width=250" alt="Numerology Certification">
+                    <h4>Numerology Expert</h4>
+                    <p>World Numerology Council</p>
+                </div>
+                <div class="certificate-card">
+                    <img src="/placeholder.svg?height=300&width=250" alt="Vastu Certification">
+                    <h4>Vastu Consultant</h4>
+                    <p>Vastu Shastra Institute</p>
                 </div>
             </div>
         </div>
@@ -119,80 +153,80 @@
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
         <div class="container">
-            <h2 class="section-title">Voices of Transformation</h2>
+            <h2 class="section-title">What Our Clients Say</h2>
             <div class="testimonials-carousel">
                 <div class="testimonial-track">
-                    <div class="testimonial active">
+                    <div class="testimonial-card active">
                         <div class="testimonial-content">
-                            <div class="stars">
+                            <div class="stars-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <p>"The reading was incredibly accurate and insightful. It gave me clarity about my career path and helped me make important life decisions with confidence."</p>
+                            <p>"The reading was incredibly accurate and insightful. It helped me make important life decisions with confidence."</p>
                             <div class="testimonial-author">
-                                <img src="/placeholder.svg?height=60&width=60" alt="Sarah Johnson">
+                                <img src="/placeholder.svg?height=60&width=60" alt="Priya Sharma">
                                 <div class="author-info">
-                                    <h4>Sarah Johnson</h4>
-                                    <span>Marketing Executive</span>
+                                    <h4>Priya Sharma</h4>
+                                    <span>Business Owner</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial">
+                    <div class="testimonial-card">
                         <div class="testimonial-content">
-                            <div class="stars">
+                            <div class="stars-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <p>"The compatibility analysis saved my relationship. We now understand each other better and have tools to navigate challenges together."</p>
+                            <p>"Amazing compatibility analysis! It gave us deep insights into our relationship and how to strengthen our bond."</p>
                             <div class="testimonial-author">
-                                <img src="/placeholder.svg?height=60&width=60" alt="Michael & Lisa">
+                                <img src="/placeholder.svg?height=60&width=60" alt="Raj & Meera">
                                 <div class="author-info">
-                                    <h4>Michael & Lisa</h4>
+                                    <h4>Raj & Meera</h4>
                                     <span>Married Couple</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial">
+                    <div class="testimonial-card">
                         <div class="testimonial-content">
-                            <div class="stars">
+                            <div class="stars-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <p>"Amazing accuracy in predictions! The yearly forecast helped me prepare for opportunities and challenges. Highly recommended!"</p>
+                            <p>"The yearly forecast was spot on! Every prediction came true and the remedies really helped improve my situation."</p>
                             <div class="testimonial-author">
-                                <img src="/placeholder.svg?height=60&width=60" alt="David Chen">
+                                <img src="/placeholder.svg?height=60&width=60" alt="Amit Kumar">
                                 <div class="author-info">
-                                    <h4>David Chen</h4>
-                                    <span>Entrepreneur</span>
+                                    <h4>Amit Kumar</h4>
+                                    <span>Software Engineer</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial">
+                    <div class="testimonial-card">
                         <div class="testimonial-content">
-                            <div class="stars">
+                            <div class="stars-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <p>"Life-changing experience! The insights about my spiritual path and life purpose have transformed how I approach every day."</p>
+                            <p>"Life-changing experience! The guidance helped me find my true calling and spiritual path."</p>
                             <div class="testimonial-author">
-                                <img src="/placeholder.svg?height=60&width=60" alt="Emma Rodriguez">
+                                <img src="/placeholder.svg?height=60&width=60" alt="Kavya Reddy">
                                 <div class="author-info">
-                                    <h4>Emma Rodriguez</h4>
+                                    <h4>Kavya Reddy</h4>
                                     <span>Yoga Instructor</span>
                                 </div>
                             </div>
@@ -212,44 +246,49 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Begin Your Cosmic Journey</h2>
+            <h2 class="section-title">Get in Touch</h2>
             <div class="contact-content">
-                <div class="contact-form-container">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Tell me about your cosmic questions..." rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                </div>
                 <div class="contact-info">
+                    <h3>Contact Information</h3>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Call for Consultation</h4>
-                            <a href="tel:+1234567890">+1 (234) 567-8900</a>
-                        </div>
+                        <span>+91 98765 43210</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email Inquiry</h4>
-                            <a href="mailto:info@astrovision.com">info@astrovision.com</a>
-                        </div>
+                        <span>info@astrovision.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Mumbai, Maharashtra, India</span>
                     </div>
                     <div class="whatsapp-chat">
-                        <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn">
+                        <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-btn">
                             <i class="fab fa-whatsapp"></i>
                             Chat on WhatsApp
                         </a>
                     </div>
                 </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">Select Service</option>
+                            <option value="horoscope">Personal Horoscope Reading</option>
+                            <option value="compatibility">Compatibility Analysis</option>
+                            <option value="forecast">Yearly Forecast</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
@@ -258,11 +297,11 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
+                <div class="footer-section">
                     <h3>AstroVision</h3>
-                    <p>Illuminating your path through cosmic wisdom</p>
+                    <p>Guiding souls through ancient wisdom and cosmic insights.</p>
                 </div>
-                <div class="footer-links">
+                <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
@@ -271,9 +310,9 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-social">
+                <div class="footer-section">
                     <h4>Follow Us</h4>
-                    <div class="social-icons">
+                    <div class="social-links">
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
                         <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
@@ -281,7 +320,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 AstroVision. All rights reserved. | Designed with cosmic love ✦</p>
+                <p>&copy; 2024 AstroVision. All rights reserved.</p>
             </div>
         </div>
     </footer>
