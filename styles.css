@@ -1227,3 +1227,315 @@ a:hover {
         height: 200px;
     }
 } 
+
+/* Marquee Section - Mobile Enhanced */
+.mobile-marquee {
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-marquee .marquee {
+    animation: slideInFromRight 1.5s ease-out 0.5s both;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Why Best Section Enhanced */
+.why-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.why-profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #936d45;
+    box-shadow: 0 8px 25px rgba(147, 109, 69, 0.3);
+}
+
+.why-text h3 {
+    color: #936d45;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.why-text p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-family: 'Philosopher', serif;
+}
+
+.why-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    transition: all 0.4s ease;
+}
+
+.why-image img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+/* Location Cards Enhanced */
+.card {
+    background: linear-gradient(135deg, #fdf8f4 0%, #fff 100%);
+    padding: 25px 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.5s;
+}
+
+.card:hover::before {
+    left: 100%;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    color: #936d45;
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: 'Philosopher', serif;
+}
+
+.card .btn {
+    margin-top: 10px;
+}
+
+/* Mobile Responsive Styles - Enhanced */
+@media (max-width: 768px) {
+    /* Hero Section Mobile - Enhanced */
+    .hero {
+        padding: 40px 0 30px;
+        min-height: 60vh;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+    
+    .hero-image {
+        order: 1;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .hero-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    
+    .hero-text {
+        order: 2;
+    }
+    
+    .hero-zodiac {
+        order: 3;
+        max-width: 150px;
+        margin: 0 auto;
+    }
+    
+    .hero-subtitle {
+        font-size: 14px;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+    
+    .hero-text h1 {
+        font-size: 36px;
+        margin-bottom: 12px;
+        line-height: 1.1;
+    }
+    
+    .hero-text h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        line-height: 1.3;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 250px;
+        padding: 14px 18px;
+        font-size: 15px;
+    }
+    
+    /* Marquee Mobile - Enhanced */
+    .mobile-marquee {
+        padding: 20px 0;
+    }
+    
+    .mobile-marquee .marquee h2 {
+        font-size: 16px;
+        animation: slideInFromRight 1.2s ease-out 0.3s both;
+    }
+    
+    /* Location Cards Mobile - Enhanced */
+    .location-cards {
+        padding: 40px 15px;
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .card {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+    
+    .card img {
+        height: 160px;
+        margin-bottom: 15px;
+    }
+    
+    .card h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .card p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    
+    /* Why Best Section Mobile - Enhanced */
+    .why-best {
+        padding: 40px 15px;
+    }
+    
+    .why-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 25px;
+    }
+    
+    .why-profile-img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 15px;
+    }
+    
+    .why-text h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    
+    .why-text p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+    
+    .why-image img {
+        border-radius: 12px;
+    }
+}
+
+/* Small Mobile Devices - Enhanced */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 32px;
+    }
+    
+    .hero-text h2 {
+        font-size: 16px;
+    }
+    
+    .btn {
+        padding: 12px 16px;
+        font-size: 14px;
+        max-width: 220px;
+    }
+    
+    .mobile-marquee .marquee h2 {
+        font-size: 14px;
+    }
+    
+    .card img {
+        height: 140px;
+    }
+    
+    .why-profile-img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .why-text h3 {
+        font-size: 20px;
+    }
+} 
