@@ -2335,3 +2335,35 @@ a:hover {
     padding: 18px 35px;
     font-size: 18px;
 } 
+
+/* Phone clarity: Services as horizontal carousel */
+@media (max-width: 768px) {
+	.services-grid {
+		display: flex;
+		gap: 16px;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+		padding: 6px 16px 12px;
+	}
+	.services-grid::-webkit-scrollbar { display: none; }
+	.services-grid { scrollbar-width: none; }
+
+	.service-card {
+		flex: 0 0 88%;
+		max-width: 88%;
+		scroll-snap-align: center;
+		margin-right: 4px;
+	}
+	.service-card:last-child { margin-right: 0; }
+
+	.service-card h3 { font-size: 24px; margin-bottom: 14px; }
+	.service-card p { font-size: 16px; line-height: 1.7; margin-bottom: 20px; }
+	.service-card .btn { font-size: 16px; padding: 14px 18px; }
+}
+
+@media (max-width: 480px) {
+	.service-card { flex-basis: 92%; max-width: 92%; }
+	.service-card h3 { font-size: 22px; }
+	.service-card p { font-size: 15px; }
+} 
