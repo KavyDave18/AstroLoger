@@ -1,3 +1,36 @@
+/* Mobile menu dropdown panel and behavior */
+@media (max-width: 980px) {
+    .header { position: relative; z-index: 100; }
+    .nav-menu.active {
+        display: flex !important;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        border-top: 1px solid rgba(147,109,69,0.15);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        padding: 8px 0;
+        z-index: 1000;
+    }
+    .nav-menu.active li { margin: 0; }
+    .nav-menu.active a { display: block; padding: 12px 20px; }
+
+    /* Dropdowns inside the mobile panel toggle by class */
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+        border: none;
+        box-shadow: none;
+        padding: 0 0 8px 0;
+        background: transparent;
+    }
+    .dropdown.active .dropdown-menu { display: block; }
+}
 /* Reset and Base Styles */
 * {
     margin: 0;
