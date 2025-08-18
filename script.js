@@ -275,22 +275,54 @@ document.addEventListener('DOMContentLoaded', function() {
     // Dropdown Menu Enhancement
     function initDropdowns() {
         const dropdowns = document.querySelectorAll('.dropdown');
-        
-        dropdowns.forEach(dropdown => {
-            const menu = dropdown.querySelector('.dropdown-menu');
-            
-            // Add touch support for mobile
-            dropdown.addEventListener('touchstart', function(e) {
-                e.preventDefault();
-                dropdown.classList.toggle('active');
-            });
-            
+        const isMobile = () => window.matchMedia('(max-width: 980px)').matches;
+
+        dropdowns.forEach((dropdown) => {
+            const trigger = dropdown.querySelector(':scope > a');
+            const menu = dropdown.querySelector(':scope > .dropdown-menu');
+            if (!trigger || !menu) return;
+
+            // Remember original href to restore on desktop
+            const originalHref = trigger.getAttribute('href');
+
+            const syncHrefForMode = () => {
+                if (isMobile()) {
+                    trigger.setAttribute('data-original-href', originalHref || '');
+                    trigger.setAttribute('href', '#');
+                } else if (trigger.getAttribute('data-original-href') !== null) {
+                    trigger.setAttribute('href', trigger.getAttribute('data-original-href'));
+                }
+            };
+
+            const toggleDropdown = (e) => {
+                if (isMobile()) {
+                    if (e) { e.preventDefault(); e.stopPropagation(); }
+                    // Close any other open dropdowns
+                    document.querySelectorAll('.dropdown.active').forEach((d) => {
+                        if (d !== dropdown) d.classList.remove('active');
+                    });
+                    dropdown.classList.toggle('active');
+                    trigger.setAttribute('aria-expanded', dropdown.classList.contains('active') ? 'true' : 'false');
+                }
+            };
+
+            syncHrefForMode();
+
+            trigger.addEventListener('click', toggleDropdown);
+            trigger.addEventListener('touchstart', toggleDropdown, { passive: false });
+            trigger.addEventListener('pointerdown', (e) => { if (isMobile()) { e.preventDefault(); } });
+
             // Close dropdown when clicking outside
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', (e) => {
                 if (!dropdown.contains(e.target)) {
                     dropdown.classList.remove('active');
+                    trigger.setAttribute('aria-expanded', 'false');
                 }
             });
+
+            // Update mode on resize/orientation change
+            window.addEventListener('resize', syncHrefForMode);
+            window.addEventListener('orientationchange', syncHrefForMode);
         });
     }
     
